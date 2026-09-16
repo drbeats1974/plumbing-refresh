@@ -3,131 +3,328 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>McNeill Plumbing | Tallahassee’s Trusted Plumbers</title>
+  <title>McNeill Plumbing | Tallahassee's Master Plumbing Specialists</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @keyframes pulse-glow {
+      0%, 100% { opacity: 0.4; transform: scale(1); }
+      50% { opacity: 0.8; transform: scale(1.05); }
+    }
+    .animate-glow { animation: pulse-glow 3s infinite ease-in-out; }
+  </style>
 </head>
-<body class="bg-slate-50 text-slate-900 font-sans">
+<body class="bg-slate-950 text-slate-100 font-sans antialiased selection:bg-red-600 selection:text-white">
 
-  <!-- Navigation -->
-  <header class="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-slate-200 shadow-sm">
-    <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+  <!-- Top Emergency Dispatch Ticker -->
+  <div class="bg-red-700 text-white text-xs font-semibold py-2 px-4">
+    <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2 text-center sm:text-left">
       <div class="flex items-center gap-2">
-        <span class="text-2xl font-black text-blue-700 tracking-tight">McNeill</span>
-        <span class="text-xs font-bold uppercase tracking-wider text-slate-400 bg-slate-100 px-2 py-0.5 rounded">Tallahassee</span>
+        <span class="relative flex h-2 w-2">
+          <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-white opacity-75"></span>
+          <span class="relative inline-flex rounded-full h-2 w-2 bg-white"></span>
+        </span>
+        <span><strong>24/7 EMERGENCY DISPATCH ACTIVE</strong> — Serving Tallahassee, Quincy, and surrounding areas.</span>
       </div>
-      <div class="flex items-center gap-4">
-        <div class="hidden sm:block text-right">
-          <span class="block text-xs text-slate-500 font-medium">24/7 Emergency Line</span>
-          <a href="tel:8505625504" class="text-blue-600 font-bold text-sm hover:underline">(850) 562-5504</a>
+      <a href="tel:8505625504" class="underline hover:text-slate-200 font-bold transition">Direct Line: (850) 562-5504 &rarr;</a>
+    </div>
+  </div>
+
+  <!-- Header / Navigation -->
+  <header class="sticky top-0 z-50 bg-slate-950/80 backdrop-blur-xl border-b border-slate-800/80">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+      <!-- Logo Branding -->
+      <a href="#" class="flex items-center gap-3 group">
+        <div class="w-10 h-10 rounded-xl bg-red-600 flex items-center justify-center font-black text-xl text-white shadow-lg shadow-red-600/30 group-hover:scale-105 transition">
+          M
         </div>
-        <a href="tel:8505625504" class="bg-blue-600 hover:bg-blue-700 text-white font-bold px-4 py-2 rounded-xl text-sm shadow-md shadow-blue-600/20 transition">
-          Call Now
-        </a>
-      </div>
+        <div>
+          <span class="text-xl font-black tracking-tight text-white block leading-none">MCNEILL</span>
+          <span class="text-[10px] font-bold uppercase tracking-widest text-red-500 block mt-1">Plumbing Co.</span>
+        </div>
+      </a>
+
+      <!-- Desktop Nav Links -->
+      <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-300">
+        <a href="#services" class="hover:text-red-400 transition">Services</a>
+        <a href="#why-us" class="hover:text-red-400 transition">Why Pure Plumbing</a>
+        <a href="#process" class="hover:text-red-400 transition">Emergency Response</a>
+        <a href="#contact" class="hover:text-red-400 transition">Contact</a>
+      </nav>
+
+      <!-- CTA Button -->
+      <a href="tel:8505625504" class="bg-red-600 hover:bg-red-500 text-white font-bold px-5 py-2.5 rounded-xl text-sm shadow-lg shadow-red-600/25 transition flex items-center gap-2 transform hover:-translate-y-0.5">
+        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+        (850) 562-5504
+      </a>
     </div>
   </header>
 
-  <!-- Hero Section with Background Overlay -->
-  <section class="relative bg-slate-900 text-white py-24 px-4 overflow-hidden">
-    <div class="absolute inset-0 opacity-25 bg-[radial-gradient(#3b82f6_1px,transparent_1px)] [background-size:16px_16px]"></div>
-    <div class="max-w-4xl mx-auto text-center space-y-6 relative z-10">
-      <span class="inline-flex items-center gap-1.5 bg-blue-500/10 text-blue-400 text-xs font-semibold px-3 py-1 rounded-full uppercase tracking-wider border border-blue-500/20">
-        <span class="w-2 h-2 rounded-full bg-blue-500 animate-pulse"></span> 24/7 Emergency Service • Tallahassee & Surrounding Areas
-      </span>
-      <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight leading-tight">
-        Tallahassee’s Largest <span class="text-blue-500">Pure Plumbing</span> Specialist
-      </h1>
-      <p class="text-slate-300 text-lg md:text-xl max-w-2xl mx-auto">
-        Providing expert residential and commercial plumbing solutions since 1991. No HVAC distractions—just pure plumbing excellence.
-      </p>
-      <div class="flex flex-col sm:flex-row justify-center gap-4 pt-4">
-        <a href="tel:8505625504" class="bg-blue-600 hover:bg-blue-500 font-bold px-8 py-4 rounded-xl text-lg shadow-xl shadow-blue-600/30 transition transform hover:-translate-y-0.5">
-          Emergency Call Now
-        </a>
-        <a href="#contact" class="bg-slate-800 hover:bg-slate-700 font-medium px-8 py-4 rounded-xl text-lg border border-slate-700 transition">
-          Request Estimate
-        </a>
-      </div>
-    </div>
-  </section>
+  <!-- Asymmetric Hero Section -->
+  <section class="relative pt-12 pb-24 md:py-32 overflow-hidden">
+    <!-- Ambient Background Lighting -->
+    <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[400px] bg-red-600/15 blur-[140px] rounded-full pointer-events-none animate-glow"></div>
 
-  <!-- Trust Bar -->
-  <section class="bg-white border-b border-slate-200 py-6">
-    <div class="max-w-6xl mx-auto px-4 grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
-      <div>
-        <p class="text-2xl font-black text-slate-900">30+ Years</p>
-        <p class="text-xs text-slate-500 uppercase tracking-wider mt-1">In Business</p>
-      </div>
-      <div>
-        <p class="text-2xl font-black text-slate-900">100%</p>
-        <p class="text-xs text-slate-500 uppercase tracking-wider mt-1">Pure Plumbing</p>
-      </div>
-      <div>
-        <p class="text-2xl font-black text-slate-900">24/7</p>
-        <p class="text-xs text-slate-500 uppercase tracking-wider mt-1">Emergency Dispatch</p>
-      </div>
-      <div>
-        <p class="text-2xl font-black text-slate-900">Licensed</p>
-        <p class="text-xs text-slate-500 uppercase tracking-wider mt-1">& Insured FL</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Key Services -->
-  <section class="max-w-6xl mx-auto px-4 py-20">
-    <div class="text-center max-w-xl mx-auto mb-12">
-      <h2 class="text-3xl font-extrabold tracking-tight mb-3">Specialized Plumbing Services</h2>
-      <p class="text-slate-600 text-sm">Professional care for residential and commercial properties across North Florida.</p>
-    </div>
-    <div class="grid md:grid-cols-3 gap-8">
-      <div class="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm hover:shadow-xl transition group">
-        <div class="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center text-blue-600 font-bold mb-6 group-hover:bg-blue-600 group-hover:text-white transition">
-          🏠
+    <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-12 gap-12 items-center relative z-10">
+      
+      <!-- Hero Content Left -->
+      <div class="lg:col-span-7 space-y-8 text-left">
+        <div class="inline-flex items-center gap-2 bg-slate-900 border border-slate-800 px-4 py-2 rounded-full text-xs font-semibold text-slate-300">
+          <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+          Established 1991 • Tallahassee’s Largest Pure Plumber
         </div>
-        <h3 class="text-xl font-bold text-slate-900 mb-2">Residential Plumbing</h3>
-        <p class="text-slate-600 text-sm leading-relaxed">Tankless water heaters, slab leak detection, hydro jetting, low water pressure troubleshooting, and septic conversions.</p>
+
+        <h1 class="text-4xl sm:text-6xl font-black tracking-tight text-white leading-[1.1]">
+          Plumbing Crisis? <br/>
+          <span class="bg-gradient-to-r from-red-500 via-red-400 to-orange-400 bg-clip-text text-transparent">Consider It Solved.</span>
+        </h1>
+
+        <p class="text-slate-400 text-lg md:text-xl max-w-xl leading-relaxed">
+          We don't fix AC units. We don't clean air ducts. For over 30 years, Keith McNeill Plumbing has focused 100% on master-level residential & commercial plumbing infrastructure.
+        </p>
+
+        <!-- CTA Action Group -->
+        <div class="flex flex-col sm:flex-row gap-4 pt-2">
+          <a href="tel:8505625504" class="bg-red-600 hover:bg-red-500 text-white font-black px-8 py-4 rounded-2xl text-lg shadow-xl shadow-red-600/30 transition flex items-center justify-center gap-3">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+            Call Emergency Dispatch
+          </a>
+          <a href="#contact" class="bg-slate-900 hover:bg-slate-800 border border-slate-800 text-slate-200 font-bold px-8 py-4 rounded-2xl text-lg transition flex items-center justify-center">
+            Request Service Quote
+          </a>
+        </div>
+
+        <!-- Social Proof Stats -->
+        <div class="pt-8 border-t border-slate-800/80 grid grid-cols-3 gap-6">
+          <div>
+            <p class="text-3xl font-black text-white">35+</p>
+            <p class="text-xs text-slate-500 uppercase tracking-wider font-semibold mt-1">Years Experience</p>
+          </div>
+          <div>
+            <p class="text-3xl font-black text-white">24/7</p>
+            <p class="text-xs text-slate-500 uppercase tracking-wider font-semibold mt-1">Live Response</p>
+          </div>
+          <div>
+            <p class="text-3xl font-black text-red-500">100%</p>
+            <p class="text-xs text-slate-500 uppercase tracking-wider font-semibold mt-1">Pure Plumbing</p>
+          </div>
+        </div>
       </div>
-      <div class="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm hover:shadow-xl transition group">
-        <div class="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center text-blue-600 font-bold mb-6 group-hover:bg-blue-600 group-hover:text-white transition">
+
+      <!-- Hero Glassmorphism Dispatch Card Right -->
+      <div class="lg:col-span-5">
+        <div class="relative bg-slate-900/60 backdrop-blur-2xl border border-slate-800 p-8 rounded-3xl shadow-2xl space-y-6">
+          <div class="flex items-center justify-between">
+            <span class="text-xs font-bold uppercase tracking-widest text-slate-400">Live Status Board</span>
+            <span class="bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 px-3 py-1 rounded-full text-xs font-bold flex items-center gap-1.5">
+              <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-ping"></span> On Duty
+            </span>
+          </div>
+
+          <div class="space-y-4">
+            <div class="p-4 rounded-2xl bg-slate-950/60 border border-slate-800/60 flex items-start gap-4">
+              <div class="w-10 h-10 rounded-xl bg-red-600/20 text-red-400 flex items-center justify-center shrink-0">
+                ⚡
+              </div>
+              <div>
+                <h4 class="font-bold text-white text-sm">Emergency Leaks & Pipe Bursts</h4>
+                <p class="text-slate-400 text-xs mt-0.5">Rapid dispatch units equipped with thermal leak detection.</p>
+              </div>
+            </div>
+
+            <div class="p-4 rounded-2xl bg-slate-950/60 border border-slate-800/60 flex items-start gap-4">
+              <div class="w-10 h-10 rounded-xl bg-red-600/20 text-red-400 flex items-center justify-center shrink-0">
+                🔥
+              </div>
+              <div>
+                <h4 class="font-bold text-white text-sm">Tankless Water Heater Care</h4>
+                <p class="text-slate-400 text-xs mt-0.5">Certified installs and flushing for instant hot water systems.</p>
+              </div>
+            </div>
+
+            <div class="p-4 rounded-2xl bg-slate-950/60 border border-slate-800/60 flex items-start gap-4">
+              <div class="w-10 h-10 rounded-xl bg-red-600/20 text-red-400 flex items-center justify-center shrink-0">
+                🏗️
+              </div>
+              <div>
+                <h4 class="font-bold text-white text-sm">Commercial Design-Build</h4>
+                <p class="text-slate-400 text-xs mt-0.5">Heavy industrial code compliance and backflow testing.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="pt-2 text-center">
+            <p class="text-xs text-slate-500">Address: 3505 N Monroe St, Tallahassee, FL 32303</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- The "Pure Plumbing" Differentiator Section -->
+  <section id="why-us" class="py-20 bg-slate-900/50 border-y border-slate-800">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center max-w-2xl mx-auto mb-16">
+        <h2 class="text-xs font-bold uppercase tracking-widest text-red-500 mb-2">The McNeill Difference</h2>
+        <p class="text-3xl sm:text-4xl font-extrabold text-white">Why "Pure Plumbing" Matters To You</p>
+        <p class="text-slate-400 text-sm mt-3">Most local companies divide their attention across HVAC, roofing, and general handyman work. Here is why specialization wins every time.</p>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-8">
+        <!-- Generic HVAC/Plumbing Mix -->
+        <div class="bg-slate-950/60 p-8 rounded-3xl border border-slate-800/60 space-y-4 opacity-75">
+          <div class="text-slate-500 font-bold uppercase text-xs tracking-wider">Other Service Companies</div>
+          <h3 class="text-xl font-bold text-slate-300">The HVAC Generalist</h3>
+          <ul class="space-y-3 text-slate-400 text-sm">
+            <li class="flex items-center gap-3"><span class="text-red-500 font-bold">✕</span> Plumbing is treated as a secondary side product</li>
+            <li class="flex items-center gap-3"><span class="text-red-500 font-bold">✕</span> Technicians often lack advanced gas line certification</li>
+            <li class="flex items-center gap-3"><span class="text-red-500 font-bold">✕</span> Basic tools lead to subcontracting complex slab leaks</li>
+          </ul>
+        </div>
+
+        <!-- McNeill Pure Plumber -->
+        <div class="bg-gradient-to-b from-slate-900 to-slate-950 p-8 rounded-3xl border-2 border-red-600/50 space-y-4 relative shadow-2xl">
+          <span class="absolute -top-3 right-6 bg-red-600 text-white text-[10px] font-black uppercase px-3 py-1 rounded-full tracking-wider">Our Promise</span>
+          <div class="text-red-500 font-bold uppercase text-xs tracking-wider">McNeill Plumbing</div>
+          <h3 class="text-xl font-bold text-white">The Pure Plumbing Specialist</h3>
+          <ul class="space-y-3 text-slate-200 text-sm">
+            <li class="flex items-center gap-3"><span class="text-emerald-400 font-bold">✓</span> 100% focused on master-grade plumbing infrastructure</li>
+            <li class="flex items-center gap-3"><span class="text-emerald-400 font-bold">✓</span> Full in-house hydro jetting, camera inspection & gas piping</li>
+            <li class="flex items-center gap-3"><span class="text-emerald-400 font-bold">✓</span> Decades of local Tallahassee code & soil expertise</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Core Services Grid -->
+  <section id="services" class="py-24 max-w-7xl mx-auto px-6">
+    <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-4">
+      <div>
+        <h2 class="text-xs font-bold uppercase tracking-widest text-red-500 mb-2">Comprehensive Solutions</h2>
+        <p class="text-3xl sm:text-4xl font-extrabold text-white">Master Plumbing Services</p>
+      </div>
+      <p class="text-slate-400 text-sm max-w-md">From residential emergencies to full commercial construction, our master plumbers handle every project with precision.</p>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-8">
+      
+      <!-- Card 1 -->
+      <div class="bg-slate-900/40 p-8 rounded-3xl border border-slate-800 hover:border-red-600/50 hover:bg-slate-900 transition duration-300 group">
+        <div class="w-14 h-14 bg-red-600/10 rounded-2xl flex items-center justify-center text-red-500 text-2xl mb-6 group-hover:scale-110 group-hover:bg-red-600 group-hover:text-white transition">
+          🔧
+        </div>
+        <h3 class="text-xl font-bold text-white mb-3">Residential Plumbing</h3>
+        <p class="text-slate-400 text-sm leading-relaxed mb-4">
+          Tankless water heater upgrades, non-invasive slab leak detection, hydro jetting drain cleans, low pressure fixes, and septic-to-sewer conversions.
+        </p>
+        <a href="#contact" class="text-xs font-bold text-red-500 hover:text-red-400 uppercase tracking-wider inline-flex items-center gap-1">Schedule Repair &rarr;</a>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="bg-slate-900/40 p-8 rounded-3xl border border-slate-800 hover:border-red-600/50 hover:bg-slate-900 transition duration-300 group">
+        <div class="w-14 h-14 bg-red-600/10 rounded-2xl flex items-center justify-center text-red-500 text-2xl mb-6 group-hover:scale-110 group-hover:bg-red-600 group-hover:text-white transition">
           🏢
         </div>
-        <h3 class="text-xl font-bold text-slate-900 mb-2">Commercial Services</h3>
-        <p class="text-slate-600 text-sm leading-relaxed">Full-scale commercial design-build projects, new construction builds, extensive renovations, and annual backflow certifications.</p>
+        <h3 class="text-xl font-bold text-white mb-3">Commercial Infrastructure</h3>
+        <p class="text-slate-400 text-sm leading-relaxed mb-4">
+          End-to-end commercial design-build services, municipal code upgrades, commercial remodels, and certified backflow prevention testing.
+        </p>
+        <a href="#contact" class="text-xs font-bold text-red-500 hover:text-red-400 uppercase tracking-wider inline-flex items-center gap-1">Commercial Quote &rarr;</a>
       </div>
-      <div class="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm hover:shadow-xl transition group">
-        <div class="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center text-blue-600 font-bold mb-6 group-hover:bg-blue-600 group-hover:text-white transition">
-          ⚡
+
+      <!-- Card 3 -->
+      <div class="bg-slate-900/40 p-8 rounded-3xl border border-slate-800 hover:border-red-600/50 hover:bg-slate-900 transition duration-300 group">
+        <div class="w-14 h-14 bg-red-600/10 rounded-2xl flex items-center justify-center text-red-500 text-2xl mb-6 group-hover:scale-110 group-hover:bg-red-600 group-hover:text-white transition">
+          💧
         </div>
-        <h3 class="text-xl font-bold text-slate-900 mb-2">Specialty & Treatment</h3>
-        <p class="text-slate-600 text-sm leading-relaxed">Gas piping installations, water conditioning setups (Easy Water), and eco-friendly Bio-Clean professional drain maintenance.</p>
+        <h3 class="text-xl font-bold text-white mb-3">Gas & Water Treatment</h3>
+        <p class="text-slate-400 text-sm leading-relaxed mb-4">
+          Certified natural gas and propane line installations, Easy Water conditioning systems, and eco-friendly Bio-Clean professional drain treatments.
+        </p>
+        <a href="#contact" class="text-xs font-bold text-red-500 hover:text-red-400 uppercase tracking-wider inline-flex items-center gap-1">Learn More &rarr;</a>
       </div>
+
     </div>
   </section>
 
-  <!-- Contact Form Section -->
-  <section id="contact" class="bg-slate-100 py-20 px-4 border-t border-slate-200">
-    <div class="max-w-xl mx-auto bg-white p-8 md:p-10 rounded-3xl border border-slate-200 shadow-xl">
-      <h2 class="text-2xl font-bold mb-2 text-center">Schedule Non-Emergency Service</h2>
-      <p class="text-slate-500 text-sm text-center mb-8">Fill out the form below and our team will get back to you shortly.</p>
-      <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="space-y-5">
-        <div>
-          <label class="block text-xs font-bold uppercase tracking-wider text-slate-600 mb-2">Full Name</label>
-          <input type="text" name="name" required class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-blue-600 outline-none transition" placeholder="John Doe" />
+  <!-- Contact / Booking Section -->
+  <section id="contact" class="py-24 bg-slate-900/80 border-t border-slate-800 relative">
+    <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-12 gap-12 items-center">
+      
+      <!-- Left info -->
+      <div class="lg:col-span-5 space-y-6">
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-white">Need a Fast Estimate or Non-Emergency Service?</h2>
+        <p class="text-slate-400 text-sm leading-relaxed">
+          Submit your request below and our shop supervisor will contact you within 1 business hour. For immediate water leaks or outages, please call directly.
+        </p>
+
+        <div class="space-y-4 pt-4">
+          <div class="flex items-center gap-4">
+            <div class="w-10 h-10 rounded-xl bg-slate-800 flex items-center justify-center text-red-500 shrink-0">📍</div>
+            <div>
+              <p class="text-xs text-slate-500 font-bold uppercase">Office Location</p>
+              <p class="text-sm font-semibold text-white">3505 N Monroe St, Tallahassee, FL 32303</p>
+            </div>
+          </div>
+
+          <div class="flex items-center gap-4">
+            <div class="w-10 h-10 rounded-xl bg-slate-800 flex items-center justify-center text-red-500 shrink-0">🕒</div>
+            <div>
+              <p class="text-xs text-slate-500 font-bold uppercase">Office Hours</p>
+              <p class="text-sm font-semibold text-white">Mon – Fri: 8:00 AM – 5:00 PM (24/7 Emergency Dispatch)</p>
+            </div>
+          </div>
         </div>
-        <div>
-          <label class="block text-xs font-bold uppercase tracking-wider text-slate-600 mb-2">Phone Number</label>
-          <input type="tel" name="phone" required class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-blue-600 outline-none transition" placeholder="(850) 000-0000" />
-        </div>
-        <div>
-          <label class="block text-xs font-bold uppercase tracking-wider text-slate-600 mb-2">Service Details</label>
-          <textarea name="message" rows="4" required class="w-full px-4 py-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-blue-600 outline-none transition" placeholder="Describe your plumbing issue..."></textarea>
-        </div>
-        <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 rounded-xl shadow-lg shadow-blue-600/30 transition">
-          Submit Service Request
-        </button>
-      </form>
+      </div>
+
+      <!-- Right Form -->
+      <div class="lg:col-span-7 bg-slate-950 border border-slate-800 p-8 sm:p-10 rounded-3xl shadow-2xl">
+        <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="space-y-5">
+          <div class="grid sm:grid-cols-2 gap-5">
+            <div>
+              <label class="block text-xs font-bold uppercase tracking-wider text-slate-400 mb-2">Full Name</label>
+              <input type="text" name="name" required class="w-full bg-slate-900 border border-slate-800 rounded-xl px-4 py-3 text-white text-sm focus:border-red-600 focus:outline-none transition" placeholder="John Doe" />
+            </div>
+            <div>
+              <label class="block text-xs font-bold uppercase tracking-wider text-slate-400 mb-2">Phone Number</label>
+              <input type="tel" name="phone" required class="w-full bg-slate-900 border border-slate-800 rounded-xl px-4 py-3 text-white text-sm focus:border-red-600 focus:outline-none transition" placeholder="(850) 000-0000" />
+            </div>
+          </div>
+
+          <div>
+            <label class="block text-xs font-bold uppercase tracking-wider text-slate-400 mb-2">Service Type Needed</label>
+            <select name="service" class="w-full bg-slate-900 border border-slate-800 rounded-xl px-4 py-3 text-white text-sm focus:border-red-600 focus:outline-none transition">
+              <option>Water Heater Service (Tankless/Standard)</option>
+              <option>Drain Cleaning / Hydro Jetting</option>
+              <option>Slab Leak Detection</option>
+              <option>Gas Piping Installation</option>
+              <option>Commercial Plumbing Project</option>
+              <option>General Plumbing Repair</option>
+            </select>
+          </div>
+
+          <div>
+            <label class="block text-xs font-bold uppercase tracking-wider text-slate-400 mb-2">Issue Description</label>
+            <textarea name="message" rows="4" required class="w-full bg-slate-900 border border-slate-800 rounded-xl px-4 py-3 text-white text-sm focus:border-red-600 focus:outline-none transition" placeholder="Tell us briefly about the plumbing issue..."></textarea>
+          </div>
+
+          <button type="submit" class="w-full bg-red-600 hover:bg-red-500 text-white font-bold py-4 rounded-xl shadow-lg shadow-red-600/30 transition text-sm">
+            Send Request To Dispatch
+          </button>
+        </form>
+      </div>
+
     </div>
   </section>
+
+  <!-- Footer -->
+  <footer class="bg-slate-950 py-12 border-t border-slate-900 text-center text-xs text-slate-600">
+    <div class="max-w-7xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+      <p>© 2026 Keith McNeill Plumbing Inc. All rights reserved.</p>
+      <p>Serving Tallahassee, Leon County, and South Georgia since 1991.</p>
+    </div>
+  </footer>
 
 </body>
 </html>
